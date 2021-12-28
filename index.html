@@ -626,8 +626,7 @@
         .className += ' fa fa-search';
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
-		
-         var baseMaps = {
+        var baseMaps = {
 		"VietnamOSMMaps": layer_VietnamOSMMaps_0,
 		"GoogleSatellite": layer_GoogleSatellite_1
 		};
@@ -648,9 +647,10 @@
 		L.control.scale({
             metric:true,
             imperial: true,
-            position: 'bottomright',
+            position: 'bottomleft',
         }).addTo(map);
 		
+	
         </script>
     </body>
 </html>
