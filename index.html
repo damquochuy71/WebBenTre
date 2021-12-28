@@ -626,9 +626,11 @@
         .className += ' fa fa-search';
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
+		
          var baseMaps = {
 		"VietnamOSMMaps": layer_VietnamOSMMaps_0,
-		"GoogleSatellite": layer_GoogleSatellite_1};
+		"GoogleSatellite": layer_GoogleSatellite_1
+		};
 		var overlayers = {
 		'<img src="legend/TadbostlPha_10.png" /> Tọa độ dự báo sạt lở Phú Đa': layer_TadbostlPha_10,
 		'<img src="legend/HnhlangstlPha_9.png" /> Hành lang sạt lở Phú Đa': layer_HnhlangstlPha_9,
@@ -646,7 +648,7 @@
 		L.control.scale({
             metric:true,
             imperial: true,
-            position: 'bottomleft',
+            position: 'bottomright',
         }).addTo(map);
 		
         </script>
