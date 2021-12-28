@@ -9,8 +9,8 @@
         <link rel="stylesheet" href="css/leaflet.css"><link rel="stylesheet" href="css/L.Control.Locate.min.css">
         <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
         <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
-    	<link rel="stylesheet" href="css/leaflet-measure.css">
-		<style>
+        <link rel="stylesheet" href="css/leaflet-measure.css">
+        <style>
         html, body, #map {
             width: 100%;
             height: 100%;
@@ -22,7 +22,7 @@
     </head>
     <body>
         <div id="map">
-		</div>
+        </div>
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script><script src="js/L.Control.Locate.min.js"></script>
         <script src="js/leaflet.rotatedMarker.js"></script>
@@ -76,7 +76,6 @@
         }
         map.createPane('pane_VietnamOSMMaps_0');
         map.getPane('pane_VietnamOSMMaps_0').style.zIndex = 400;
-		//Basemap
         var layer_VietnamOSMMaps_0 = L.tileLayer('http://thuduc-maps.hcmgis.vn/thuducserver/gwc/service/wmts?layer=thuduc:thuduc_maps&style=&tilematrixset=EPSG:900913&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix=EPSG:900913:{z}&TileCol={x}&TileRow={y}', {
             pane: 'pane_VietnamOSMMaps_0',
             opacity: 1.0,
@@ -101,7 +100,6 @@
         });
         layer_GoogleSatellite_1;
         map.addLayer(layer_GoogleSatellite_1);
-		
         function pop_HnhlangantonVmRng_2(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -628,6 +626,7 @@
         .className += ' fa fa-search';
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
+		
         var baseMaps = {
 		"VietnamOSMMaps": layer_VietnamOSMMaps_0,
 		"GoogleSatellite": layer_GoogleSatellite_1};
@@ -645,14 +644,12 @@
         L.control.layers(baseMaps,overlayers,).addTo(map);
         setBounds();
 		
-		L.control.scale({
+		//Scale
+		 L.control.scale({
             metric:true,
             imperial: true,
             position: 'bottomleft',
         }).addTo(map);
-		
-	
-		
         </script>
     </body>
 </html>
