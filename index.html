@@ -639,12 +639,9 @@
         .className += ' fa fa-search';
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
-        var baseMaps = {
-		"Google Maps": layer_GoogleMaps_2,
-		"Vietnam OSM Maps": layer_VietnamOSMMaps_1,
-		"Google Satellite": layer_GoogleSatellite_0,
-		};
 		
+		
+        var baseMaps = {"Google Maps": layer_GoogleMaps_2,"Vietnam OSM Maps": layer_VietnamOSMMaps_1,"Google Satellite": layer_GoogleSatellite_0};
 		var overlayers = {
 		'<img src="legend/TadbostlPha_11.png" /> Tọa độ dự báo sạt lở Phú Đa': layer_TadbostlPha_11,
 		'<img src="legend/HnhlangstlPha_10.png" /> Hành lang sạt lở Phú Đa': layer_HnhlangstlPha_10,
@@ -654,10 +651,10 @@
 		'<img src="legend/HnhlangantonHngPhong_6.png" /> Hành lang an toàn Hưng Phong': layer_HnhlangantonHngPhong_6,
 		'<img src="legend/TadbostlVmRng_5.png" /> Tọa độ dự báo sạt lở Vàm Rỗng': layer_TadbostlVmRng_5,
 		'<img src="legend/HnhlangstlVmRng_4.png" /> Hành lang sạt lở Vàm Rỗng': layer_HnhlangstlVmRng_4,
-		'<img src="legend/HnhlangantonVmRng_3.png" /> Hành lang an toàn Vàm Rỗng': layer_HnhlangantonVmRng_3,
+		'<img src="legend/HnhlangantonVmRng_3.png" /> Hành lang an toàn Vàm Rỗng': layer_HnhlangantonVmRng_3
 		};
-		
-        L.control.layers(baseMaps,overlayers).addTo(map);
+
+	   L.control.layers(baseMaps,overlayers).addTo(map);
         setBounds();
 		
 		L.control.scale({
@@ -665,7 +662,6 @@
             imperial: true,
             position: 'bottomleft',
         }).addTo(map);
-		
 		
         </script>
     </body>
